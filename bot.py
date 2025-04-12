@@ -27,7 +27,7 @@ def ban_user(message):
     else:
         bot.reply_to(message, "Эта команда должна быть использована в ответ на сообщение пользователя, которого вы хотите забанить.")
 
-@bot.message_handler(commands=["/unban"])
+@bot.message_handler(commands=["unban"])
 def unban_user(message):
     if message.reply_to_message: #проверка на то, что эта команда была вызвана в ответ на сообщение 
         chat_id = message.chat.id # сохранение id чата
