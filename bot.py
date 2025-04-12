@@ -31,7 +31,6 @@ def ban_user(message):
 def unban_user(message):
     if message.reply_to_message: #проверка на то, что эта команда была вызвана в ответ на сообщение 
         chat_id = message.chat.id # сохранение id чата
-         # сохранение id и статуса пользователя, отправившего сообщение
         user_id = message.reply_to_message.from_user.id
          # проверка пользователя
         bot.unban_chat_member(chat_id, user_id) # пользователь с user_id будет забанен в чате с chat_id
